@@ -1,9 +1,10 @@
-version: "2"
-
-services:
-  app:
-    build:
-      context: .
-      command: go run main.go
-    ports:
-      - "8080:8080"
+meta:
+  environment: golang
+  toolchain:
+    name: go
+    version: 1.25.1
+build:
+  image: golang:1.25
+run:
+  image: golang:1.25  persistenceMount: /data
+  containerPort: 80
