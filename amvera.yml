@@ -1,4 +1,3 @@
-version: null
 meta:
   environment: golang
   toolchain:
@@ -9,4 +8,4 @@ build:
 run:
   image: null
   persistenceMount: /data
-  containerPort: 8080
+  containerPort: "80"
